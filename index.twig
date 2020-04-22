@@ -1,0 +1,259 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    <div class="page-section--is-banner">
+
+        <div class="popup-alert">   
+            <style type="text/css">
+                .popup-alert__content {
+                    position: absolute;
+                    z-index: 100;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: rgba(0,0,0,0.7);
+                }
+
+                .popup-alert__img {
+                    max-width: 100%;
+                }
+
+                .popup-alert__close {
+                    position: absolute;
+                    top: 30px;
+                    right: 30px;
+                    border-radius: 50%;
+                    width: 50px;
+                    height: 50px;
+                    border: 2px solid #e04d39;
+                    background-color: #FBE9E8;
+                    color: #e04d39;
+                }
+            </style>
+
+            <div class="popup-alert__content">
+                <img class="popup-alert__img" src="{{ site.theme.link }}/assets/images/korona.jpg" alt="Осторожно: Короновирус">
+                <button class="popup-alert__close" type="button">
+                    <svg width="17" height="17" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg"><g stroke-width="2" stroke="#e04d39" fill="none" fill-rule="evenodd" stroke-linecap="round"><path d="M1 1l14.14 14.14M15 1L1 15"/></g></svg>
+                </button>
+            </div>
+
+            <script>
+                var popup = document.querySelector('.popup-alert');
+                var content = popup.querySelector('.popup-alert__content');
+                var close = popup.querySelector('.popup-alert__close');
+
+                close.addEventListener('click', function () {
+                    popup.remove();
+                })
+                content.addEventListener('click', function (evt) {
+                    if (evt.target === content) {
+                        popup.remove();
+                    }
+                })
+            </script>
+        </div>
+
+        <div class="page-section__inner">
+            <div class="banner">
+
+                <div class="banner__container">
+                    <div class="banner__title">
+                            <h1 class="title--main-title-in-banner">
+                                {{post.meta('banner_title')}}
+                            </h1>
+                                
+                            <h3 class="title--sub-title-in-banner banner--line-height">{{post.meta('banner_subtitle')}}</h3>
+                    </div>
+                    {% set banner_image = TimberImage(post.meta('banner_image')) %}
+                    <div class="banner__images"><img src="{{banner_image.src}}" alt="{{banner_image.alt}}"></div>
+
+                    <div class="baner__action">
+                        <form class="form" action="/send.php" method="POST">
+                            <h4 class="form__tittle">Форма заявки</h4>
+                            <div class="container-element__form">
+                                <input class="form__input" name="username" type="text" data-label="Имя" data-rule="username" placeholder="Ваше имя"></input>
+                                <input class="form__input" name="telephone" type="tel" data-label="Телефон" placeholder="Ваш телефон"></input>
+                                <button class="form__button">Оставить заявку</button>
+                            </div>
+
+                        </form>
+
+                        <div class="video">
+                            <a id="video-play-btn" href="{{data.meta('video').url}}">
+                                <img src="{{ site.theme.link }}/assets/images/Видео.svg" alt="Видео">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+        </div>       
+
+    </div>
+    <!-- Банер -->
+        <!-- Блок МСП -->
+
+    <div>
+        <a class="block_msp" href="https://smbn.ru/msp.htm" target="_blank"></a>
+    </div>
+             
+    <!--Конец Блок МСП -->
+    <!-- Обратитесь к нам если -->
+    <div class="page-section">
+        <div class="page-section__inner">
+            <div class="page-section__title">
+                <h2 class="title--is-section">Обратитесь к нам если</h2>
+            </div>
+            
+            <div class="page-section__body">
+                <ol class="problems__list">
+
+                    <li class="problems__item">
+                        <p>Вам не хватает залогового
+                            имущества для получения
+                            необходимой суммы</p>
+                    </li>
+
+                    <div class="problems__image">
+                        <img src="{{ site.theme.link }}/assets/images/problems.png" alt="Трубка">
+                    </div>
+                    
+                    <li class="problems__item">
+                        <p>Вы не хотите
+                            оставлять свое имущество
+                            в залоге у банка</p>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <!-- Обратитесь к нам если -->
+    <!-- Как это работает -->
+    <div class="page-section--work">
+        <div class="page-section__inner">
+            <div class="page-section__title">
+                <h2 class="title--is-section">{{post206.title}}</h2>
+            </div>
+            <div class="page-section__body">
+                {{post206.content}}
+            </div> 
+        </div>
+    </div>
+    <!-- Как это работает -->
+    <!-- Инициатива АО -->
+    <div class="page-section--astrakhan">
+        <div class="page-section__inner">
+            <div class="container__astrakhan">
+                <div class="page-section__title--left--astrakhan">
+                    <h2 class="title--is-section--left--astrakhan">{{post203.title}}</h2>
+                </div>
+                {{post203.content}}
+            </div>
+        </div>
+    </div>
+    <!-- Инициатива АО -->
+    <!-- Банки партнеры -->
+    <div class="page-section">
+        <div class="page-section__inner">
+            <div class="page-section__title">
+                <h2 class="title--is-section">Наши партнеры</h2>
+                <div class="page-section__body">
+                    <div class="bank__container">
+                        {% for bank in banks|reverse %}
+                            {% set bank_image = Image(bank.meta('link_banner')) %}
+                            <div class="bank__image">
+                                <a href="{{bank.meta('link_url')}}">
+                                    <img src="{{bank_image.src('medium')}}" alt="{{bank_image.alt}}">
+                                </a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Банки партнеры -->
+    <!-- Шаги -->
+    <div class="page-section--step-by-step">
+        <div class="page-section__inner">
+            <div class="page-section__title">
+                <h2 class="title--is-section">Схема работы между вами, нами и банком</h2>
+            </div>
+            <div class="page-section__body">
+                <ol class="step-by-step__list">
+                    {% for step in steps|reverse %}
+                        <li class="step-by-step__item step-by-step__item--is-primary">
+                            <p>{{step.title}}</p>
+                        </li>
+                    {% endfor %}
+                </ol>
+            </div> 
+        </div>
+    </div>
+    <!-- Шаги -->
+    <!-- Преимущества -->
+    <div class="page-section">
+            <div class="page-section__inner">
+                <div class="page-section__title">
+                    <h2 class="title--is-section">Преимущества работы с нами</h2>
+                </div>
+            <div class="page-section__body">
+                <div class="advanteges__list">
+                    {% for advantage in advantages|reverse %}
+                        <div class="advateges__container">
+                            {% set advantage_icon = Image(advantage.meta('advantage_image')) %}
+                            <div class="advateges__img">
+                                <img src="{{advantage_icon.src}}" alt="{{advantage_icon.alt}}">
+                            </div>
+                            <div class="advateges__form">
+                                <h5 class="title--advateges">{{advantage.title}}</h5>
+                                <div class="text--advateges">
+                                    {{advantage.meta('advantage_text')}}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Преимущества -->
+ <div class="page-section">
+        <div class="page-section__inner page-section__inner--news">
+            <div class="page-section__title--businessman">
+                <h2 class="title title--is-section">Новости</h2>
+            </div>
+            <div class="page-section__body--businessman page-section__body--small-bottom">
+                {% if news %}
+                  <ul class="list" aria-label="Список новостей">
+                    {% for item in news %}
+                      <li class="list__item">
+                        <article class="news">
+                          <header class="news__header">
+                            <h3 class="news__title">
+                              <a class="news__title-link" href="{{item.slug}}">{{item.title}}</a>
+                            </h3>
+                            <p class="news__public-time">Дата публикации: {{item.date}}</p>
+                          </header>
+                          <div class="news__body">
+                            {{item.content|excerpt(20)|wpautop}}
+                          </div>
+                          <footer class="news__footer">
+                            <a href="{{item.slug}}" class="btn btn--primary">Подробнее</a>
+                          </footer>
+                        </article>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                  <div class="btn__container btn__container--center"><a class="link--more" href="/news">Все новости</a></div>
+                {% else %}
+                  <p>Новостей пока нет!</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <!-- Контакты -->
+{% endblock %}

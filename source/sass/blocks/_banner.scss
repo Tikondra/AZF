@@ -1,0 +1,19 @@
+.banner {
+  background-image: url("../img/banner.svg");
+  min-height: 97px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner__title {
+  max-width: 275px;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 10px 0 10px 80px;
+  color: #fff;
+  text-align: center;
+  background-image: url("../img/virus.svg");
+  background-position: left center;
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,51 @@
+<div class="popup-alert">	
+	<style type="text/css">
+		.popup-alert__content {
+			position: absolute;
+			z-index: 100;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: rgba(0,0,0,0.7);
+		}
+
+		.popup-alert__img {
+			max-width: 100%;
+		}
+
+		.popup-alert__close {
+			position: absolute;
+			top: 30px;
+			left: 30px;
+			border-radius: 50%;
+			width: 50px;
+			height: 50px;
+			border: 2px solid #e04d39;
+			background-color: #FBE9E8;
+			color: #e04d39;
+		}
+	</style>
+
+	<div class="popup-alert__content">
+		<img class="popup-alert__img" src="korona.jpg" alt="Осторожно: Короновирус">
+		<button class="popup-alert__close" type="button">
+			<svg width="17" height="17" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg"><g stroke-width="2" stroke="#e04d39" fill="none" fill-rule="evenodd" stroke-linecap="round"><path d="M1 1l14.14 14.14M15 1L1 15"/></g></svg>
+		</button>
+	</div>
+
+	<script>
+		var popup = document.querySelector('.popup-alert');
+		var content = popup.querySelector('.popup-alert__content');
+		var close = popup.querySelector('.popup-alert__close');
+
+		close.addEventListener('click', function () {
+			popup.remove();
+		})
+		content.addEventListener('click', function (evt) {
+			if (evt.target === content) {
+				popup.remove();
+			}
+		})
+	</script>
+</div>
