@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 612"
+	 style="enable-background:new 0 0 1920 612;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#F7F4EF;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st2{fill:#FFFFFF;}
+	.st3{fill:none;stroke:#F7F4EF;stroke-width:3;}
+</style>
+<rect id="Прямоугольник_1" y="0" class="st0" width="1920" height="612"/>
+<path id="Эллипс_9" class="st1" d="M516.5-286c320,5.4,579.5,259.5,579.5,579.5S836.5,868.8,516.5,873
+	C-600.2,887.5-288,595-288,275S-346.2-300.5,516.5-286z"/>
+<ellipse id="Эллипс_1_копия_3" class="st0" cx="408.5" cy="452.5" rx="65.5" ry="67.5"/>
+<ellipse id="Эллипс_1_копия_4" class="st2" cx="409" cy="452.5" rx="45" ry="46.5"/>
+<g id="Рубль">
+	<ellipse id="Эллипс_1_копия" class="st0" cx="945" cy="297" rx="78" ry="80"/>
+
+		<image style="overflow:visible;enable-background:new    ;" width="56" height="78" id="Векторный_смарт-объект" xlink:href="35F447B5.png"  transform="matrix(1 0 0 1 922 261.9944)">
+	</image>
+</g>
+<ellipse id="Эллипс_1_копия_2" class="st0" cx="780.6" cy="499" rx="14.7" ry="15.2"/>
+<ellipse id="Эллипс_1_копия_6" class="st3" cx="781" cy="499" rx="31" ry="32"/>
+</svg>
