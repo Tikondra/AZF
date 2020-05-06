@@ -3,8 +3,13 @@
 @import "mixin";
 @import "variables";
 @import "base";
-@import "blocks/header";
-@import "blocks/banner";
-@import "blocks/block1";
-@import "blocks/block2";
-@import "blocks/footer";
+// @import "blocks/covid/header";
+@import "blocks/covid/banner";
+@import "blocks/covid/block1";
+@import "blocks/covid/block2";
+// @import "blocks/covid/footer";
+@import "blocks/header-info";
+@import "blocks/header-navigation";
+@import "blocks/ham";
+@import "blocks/search-form";
+@import "blocks/video-banner";

@@ -4,6 +4,7 @@
   background-image: url("../img/fon5.svg");
   background-repeat: no-repeat;
   background-position: top center;
+  background-size: contain;
 
   img {
     margin: auto;
@@ -11,48 +12,54 @@
 }
 
 .block2__title {
-  max-width: 300px;
-  margin: auto;
-  margin-bottom: 32px;
-  font-size: 14px;
+  position: static;
+  display: block;
+  font-family: 'Century Gothic', sans-serif;
+  text-transform: none;
+  max-width: 400px;
+  margin: 50px auto 78px;
+  font-size: 22px;
   font-weight: 700;
-  line-height: 20px;
+  line-height: 28px;
   color: #D34839;
   text-align: center;
 }
 
 .block2__subtitle {
-  max-width: 325px;
-  margin: auto;
-  margin-bottom: 45px;
-  font-size: 12px;
-  line-height: 18px;
+  max-width: 625px;
+  margin: 20px auto 50px;
+  font-size: 20px;
+  line-height: 28px;
   font-weight: 700;
   text-align: center;
   color: #231F20;
 }
 
 .block2__2box {
-  padding: 40px 0;
+  padding: 40px 0 70px;
+  min-height: 683px;
   background-image: url("../img/fon6.svg");
   background-repeat: no-repeat;
   background-position: top center;
+  background-size: cover;
 }
 
 .block2__list {
   @include list;
+  padding: 0 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 
   li {
     width: 33.3%;
-    padding: 10px 15px;
+    padding: 25px 30px;
   }
 
   p {
-    font-size: 10px;
-    line-height: 14px;
+    margin: 15px 0;
+    font-size: 16px;
+    line-height: 24px;
     text-align: center;
   }
 }
@@ -61,7 +68,7 @@
   display: block;
   max-width: 197px;
   margin: auto;
-  margin-top: 28px;
+  margin-top: 25px;
   padding: 14px 20px;
   font-size: 14px;
   line-height: 18px;
@@ -72,20 +79,25 @@
   border: none;
   background-color: #D34839;
   border-radius: 50px;
+
+  &:hover {
+    background-color: darken(#D34839, 20%);
+  }
 }
 
 .block2__3box {
-  padding: 35px 20px;
+  padding: 70px 20px;
   min-height: 148px;
   background-image: url("../img/fon7.svg");
   background-repeat: no-repeat;
   background-position: top center;
+  background-size: cover;
 
   p {
-    max-width: 265px;
+    max-width: 465px;
     margin: 5px auto;
-    font-size: 10px;
-    line-height: 14px;
+    font-size: 16px;
+    line-height: 24px;
     text-align: center;
     color: #231F20;
   }

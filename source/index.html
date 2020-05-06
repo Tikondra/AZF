@@ -2,135 +2,128 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>AZF - поддержка бизнеса в условиях COVID-19</title>
+    <title>AZF</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
-    <!-- <div style="display: none;">
+    <div style="display: none;">
       <include src="build/img/sprite.svg"></include>
-    </div> -->
-    <header class="header">
-      <img src="img/logo.svg" width="139" height="44" alt="Мой бизнес">
-      <div class="header__logo2">
-        <img src="img/header-logo.svg" width="38" height="50" alt="Министерство экономического развития РФ">
-        <p>Министерство экономического развития&nbsp;РФ</p>
+    </div>
+    <header>
+      <div class="header-info">
+        <img
+          class="header-info__logo-1"
+          src="img/logo.svg"
+          width="156"
+          height="85"
+          alt="Мой бизнес">
+        <img
+          class="header-info__logo-2"
+          src="img/logo-secondary.svg"
+          width="300"
+          height="60"
+          alt="Астраханский залоговый фонд">
+        <div class="header-info__box">
+          <a class="header-info__mail" href="mailto:azf@list.ru">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 485 485" width="20" height="20" fill="#e04e39">
+              <use xlink:href="#icon-mail"></use>
+            </svg>
+            azf@list.ru
+          </a>
+          <p class="header-info__address">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 30" width="20" height="30" fill="#e04e39">
+              <use xlink:href="#icon-pin"></use>
+            </svg>
+            414000 г.Астрахань, ул.Кирова&nbsp;д.73/86
+          </p>
+          <a class="header-info__tel" href="tel:88512246301">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 402 402" width="20" height="20" fill="#e04e39">
+              <use xlink:href="#icon-phone"></use>
+            </svg>
+            +7 (8512) 24-63-01
+          </a>
+        </div>
       </div>
+      <nav class="header-navigation">
+        <ul class="header-navigation__list header-navigation__list--hide">
+          <li class="header-navigation__item">
+            <a class="header-navigation__link header-navigation__link--active" href="">Главная</a>
+          </li>
+          <li class="header-navigation__item">
+            <a class="header-navigation__link" href="">Предпринимателям</a>
+          </li>
+          <li class="header-navigation__item">
+            <a class="header-navigation__link" href="">Кредитным&nbsp;организациям</a>
+          </li>
+          <li class="header-navigation__item">
+            <a class="header-navigation__link" href="">Калькулятор</a>
+          </li>
+          <li class="header-navigation__item">
+            <a class="header-navigation__link" href="">Новости</a>
+          </li>
+          <li class="header-navigation__item">
+            <a class="header-navigation__link" href="">Документы</a>
+          </li>
+          <li class="header-navigation__item">
+            <a class="header-navigation__link" href="">О&nbsp;нас</a>
+          </li>
+          <li class="header-navigation__item">
+            <a class="header-navigation__link" href="">Контакты</a>
+          </li>
+          <li class="navigation__item navigation__item--search">
+            <form role="search" method="get" id="searchform" class="searchform" action="https://azf.su">
+              <div class="searchform__inner">
+                <label class="screen-reader-text visually-hidden" for="s">Поиск по сайту:</label>
+                <input class="search-input" type="text" placeholder="Поиск..." value="" name="s" id="s">
+                <button type="submit" id="searchsubmit" class="btn--search">
+                  <span class="icon-serega icon-serega--in-nav">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 485 485" width="20" height="20" fill="#fff">
+                      <use xlink:href="#icon-search"></use>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </form>
+          </li>
+        </ul>
+        <button class="header-navigation__open-menu" type="button">
+          <svg class="ham hamRotate ham1" viewBox="0 0 100 100" width="50">
+            <path class="line top"
+                  d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+            <path class="line middle"
+                  d="m 30,50 h 40" />
+            <path class="line bottom"
+                  d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+          </svg>
+        </button>
+      </nav>
     </header>
     <main>
-      <section class="banner">
-        <h1 class="banner__title">Поддержка бизнеса в&nbsp;условиях COVID-19</h1>
-      </section>
-      <section class="block1">
-        <div>
-          <h2 class="block1__title">
-            <span>Цифровая платформа —</span> единая точка входа для дистанционного получения предпринимателями различных услуг и мер поддержки по&nbsp;всей&nbsp;Российской Федерации.
-          </h2>
-        </div>
-        <div class="block1__2box">
-          <img src="img/img1.svg" width="232" height="194" alt="РФ">
-          <p>
-            Минэкономразвития России совместно&nbsp;с&nbsp;региональными центрами «Мой&nbsp;бизнес» собрали на&nbsp;платформе все услуги и&nbsp;сервисы, которые будут полезны бизнесу в любой ситуации.
-          </p>
-        </div>
-        <div class="block1__3box">
-          <p>
-            Информация <a href="">о новых льготах и мерах поддержки</a> для организаций и предпринимателей, пострадавших от пандемии, и удобных сервисах для дистанционной работы в условиях карантина
-          </p>
-        </div>
-        <div class="block1__4box">
+      <section class="video-banner">
+        <div class="video-banner__wrapper">
           <div>
-            <p>
-            Для он-лайн консультации в центре  «Мой&nbsp;бизнес» заполните <a href="">форму заявки.</a>
-            </p>
-            <p>Не требуется предварительно регистрировться, нужна лишь учетная запись Госуслуг.</p>
+            <h1 class="video-banner__title">Выступаем поручителем при&nbsp;оформлении <span>кредита&nbsp;для&nbsp;бизнеса</span></h1>
+            <ul class="video-banner__list">
+              <li class="video-banner__item">Не нужен залог</li>
+              <li class="video-banner__item">Сумма кредита больше в 2 раза</li>
+              <li class="video-banner__item">Увеличивается вероятность одобрения кредита</li>
+            </ul>
+            <button class="video-banner__btn" type="button">Оставить заявку</button>
           </div>
-          <img src="img/img2.svg" width="" height="" alt="он-лайн консультации">
-        </div>
-        <div class="block1__5box">
-          <p>
-            Вы можете сделать это в удобное время, нет необходимости звонить на горячую линию или искать адрес электронной почты профильного специалиста.
-          </p>
-          <p>
-            Консультанты центров «Мой бизнес»  рассмотрят Ваш запрос и&nbsp;направят ответ, либо свяжутся с Вами.
-          </p>
-        </div>
-      </section>
-      <section class="block2">
-        <div>
-          <h2 class="block2__title">
-            Что можно сделать на Цифровой платформе прямо сейчас?
-          </h2>
-          <img src="img/img3.svg" width="340" height="147" alt="Цифровая платформа">
-        </div>
-        <div class="block2__2box">
-          <h3 class="block2__subtitle">
-            Найти в каталоге подходящую тематическую услугу или меру поддержки и подать онлайн-заявку:
-          </h3>
-          <ul class="block2__list">
-            <li>
-              <img src="img/icon1.svg" width="40" height="42" alt="Финансовую">
-              <p>Финансовую</p>
-            </li>
-            <li>
-              <img src="img/icon2.svg" width="40" height="42" alt="Имущественную">
-              <p>Имущественную</p>
-            </li>
-            <li>
-              <img src="img/icon3.svg" width="40" height="42" alt="Консультационную">
-              <p>Консультационную</p>
-            </li>
-            <li>
-              <img src="img/icon4.svg" width="40" height="42" alt="Образовательную">
-              <p>Образовательную</p>
-            </li>
-            <li>
-              <img src="img/icon5.svg" width="40" height="42" alt="Поддержку инноваций и промышленного производства">
-              <p>Поддержку инноваций и промышленного производства</p>
-            </li>
-            <li>
-              <img src="img/icon6.svg" width="40" height="42" alt="Информационную">
-              <p>Информационную</p>
-            </li>
-            <li>
-              <img src="img/icon7.svg" width="40" height="42" alt="Получить услугу или меру поддержки в электронной форме">
-              <p>Получить услугу или меру поддержки в электронной форме</p>
-            </li>
-            <li>
-              <img src="img/icon8.svg" width="40" height="42" alt="Обратиться за специальными финансовыми продуктами банков">
-              <p>Обратиться за специальными финансовыми продуктами банков</p>
-            </li>
-            <li>
-              <img src="img/icon9.svg" width="40" height="42" alt="Найти информацию о госзакупках и перейти на электронную площадку для подачи заявки">
-              <p>Найти информацию о госзакупках и перейти на электронную площадку для подачи заявки</p>
-            </li>
-            <li>
-              <img src="img/icon10.svg" width="40" height="42" alt="Получить курсы образовательных платформ от партнеров">
-              <p>Получить курсы образовательных платформ от партнеров</p>
-            </li>
-          </ul>
-          <a class="block2__btn" href="">Полный список услуг</a>
-        </div>
-        <div class="block2__3box">
-          <p>
-            Цифровая платформа в настоящее время работает в&nbsp;тестовом режиме.
-          </p>
-          <p>
-            <b>Мы постоянно работаем над развитием услуг и&nbsp;сервисов платформы, следите за обновлениями</b>
-          </p>
+
+          <div class="video-banner__video-box">
+            <p class="video-banner__description">Видео о нашей компании</p>
+            <div class="video-banner__video-wrapper">
+              <a class="video-banner__video" href="https://azf.su/wp-content/uploads/2019/10/azf2.mp4"></a>
+            </div>
+          </div>
         </div>
       </section>
     </main>
-    <footer class="footer">
-      <img src="img/logo-w.svg" width="" height="" alt="Мой бизнес">
-      <p>
-        Официальный ресурс Министерства экономического развития России
-      </p>
-      <div>
-        <a class="footer__link footer__link--mail" href="mailto:service@in-line.ru">service@in-line.ru</a>
-        <a class="footer__link footer__link--agree" href="">Пользовательское соглашение</a>
-      </div>
+    <footer>
 
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

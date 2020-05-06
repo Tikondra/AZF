@@ -23,19 +23,13 @@ html {
 }
 
 body {
-  min-width: 600px;
-  max-width: 600px;
-  margin: auto;
-  font-family: 'Century Gothic', sans-serif;
+  min-width: 320px;
+  margin: 0;
+  font-family: "Circe", "Tahoma", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
   background-color: #fff;
-  box-shadow: 19px -1px 20px 17px #adadad;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
+
